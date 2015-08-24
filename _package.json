@@ -9,6 +9,12 @@
     "errorhandler": "1.1.1",
     "http-proxy": "1.11.1"
   },
+  "launchParams": {
+    "url": "/public/<$= _.slugify(appname) $>/<$= version $>/index.htm",
+    "showTitleBar": "YES",
+    "showToolBar": "NO",
+    "showLoading": "NO"
+  },
   "devDependencies": {},
   "engines": {
     "node": ">=0.10.0"
