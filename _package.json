@@ -10,7 +10,7 @@
     "http-proxy": "1.11.1"
   },
   "launchParams": {
-    "url": "/public/<$= _.slugify(appname) $>/<$= version $>/index.htm",
+    "url": "/public/<$= _.slugify(appname) $>/<$= version $>/index.html",
     "showTitleBar": "YES",
     "showToolBar": "NO",
     "showLoading": "NO"
