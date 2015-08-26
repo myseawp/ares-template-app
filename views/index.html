@@ -13,7 +13,22 @@
   <script src="lib/scrat.js"></script>
   <script>
     require.config(__FRAMEWORK_CONFIG__);
-    require.async('boot', function (boot) { boot() });
+    require.async('boot', function (boot) {
+      if(!require.config().debug){
+        //运行模式，监听jsbridge事件
+        if (window.WebViewJavascriptBridge) {
+          boot();
+        } else {
+          document.addEventListener('WebViewJavascriptBridgeReady', function () {
+            boot();
+          }, false);
+        }
+
+      }else{
+        boot()
+      }
+
+    });
   </script>
 </body>
 </html>
