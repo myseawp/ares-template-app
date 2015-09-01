@@ -11,42 +11,6 @@
 </head>
 <body>
   <script src="lib/scrat.js"></script>
-  <script>
-    require.config(__FRAMEWORK_CONFIG__);
-    require.async('boot', function (boot) {
-
-      var parseQueryString = function( url ){
-        var reg_url =/^[^\?]+\?([\w\W]+)$/,
-                reg_para=/([^&=]+)=([\w\W]*?)(&|$)/g, //g is very important
-                arr_url = reg_url.exec( url ),
-                ret        = {};
-        if( arr_url && arr_url[1] ){
-          var str_para = arr_url[1],result;
-          while((result = reg_para.exec(str_para)) != null){
-            ret[result[1]] = result[2];
-          }
-        }
-        return ret;
-      }
-      //将参数转化为模块对象
-      var data = parseQueryString(window.location.href);
-
-
-      if(!require.config().debug){
-        //运行模式，监听jsbridge事件
-        if (window.WebViewJavascriptBridge) {
-          boot(data);
-        } else {
-          document.addEventListener('WebViewJavascriptBridgeReady', function () {
-            boot(data);
-          }, false);
-        }
-
-      }else{
-        boot(data)
-      }
-
-    });
-  </script>
+  <script src="lib/boot.js"></script>
 </body>
 </html>
