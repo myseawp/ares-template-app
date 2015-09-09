@@ -43,6 +43,8 @@ var arr = url.match(re);
 
 
 var moduleName = arr[5].substr(0, arr[5].length - 5);
+//框架编译，不要修改
+
 
 __FRAMEWORK_REDIRECTFIG__;
 
