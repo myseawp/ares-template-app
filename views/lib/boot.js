@@ -37,12 +37,13 @@ var moduleCallback = function (boot) {
 
 
 //根据html-view名称匹配对应的模块
-var url = window.location.href
-var re = /(\w+):\/\/([^\:|\/]+)(\:\d*)?(.*\/)([^#|\?|\n]+)?(#.*)?(\?.*)?/i;
-var arr = url.match(re);
+
+var strUrl = window.location.href;
+var arrUrl = strUrl.split("/");
+var strPage = arrUrl[arrUrl.length - 1];
 
 
-var moduleName = arr[5].substr(0, arr[5].length - 5);
+var moduleName = strPage.split(".")[0];
 //框架编译，不要修改
 
 
