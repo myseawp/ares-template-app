@@ -44,10 +44,13 @@ var strPage = arrUrl[arrUrl.length - 1];
 
 
 var moduleName = strPage.split(".")[0];
-//框架编译，不要修改
-
-
-__FRAMEWORK_REDIRECTFIG__;
-
+/**
+ * 根据页面自动查找模块
+ *
+ * 例如：页面是index，查找components/index/index.js模块
+ * 请注意，所有模块需要符合commonjs规范
+ *
+ */
+require.async(moduleName,moduleCallback);
 
 
