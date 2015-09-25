@@ -22,6 +22,10 @@ fis.config.set('repo',{
     remote_url:'http://192.168.1.86/'
 })
 
+//配置内置handlebars模板支持
+fis.config.set('modules.parser.handlebars', 'handlebars-4.x');
+fis.config.set('project.fileType.text', 'handlebars');
+fis.config.set('roadmap.ext.handlebars', 'js');
 
 fis.config.set('name', meta.name);
 fis.config.set('version', meta.version);
