@@ -5,7 +5,7 @@ fis.config.set('settings.deploy.zip', {
     publish : [{
         from : '/',
         to: '/',
-        include : ["/public/**","/package.json"],
+        include : ["/public/**"],
         file: './output/www.zip',
         "server": {
             "receiver": "http://127.0.0.1:8888/api/upload",
