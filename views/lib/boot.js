@@ -1,7 +1,7 @@
 require.config(__FRAMEWORK_CONFIG__);
 
 
-__inline('handlebars.runtime-v1.3.0.js');
+__inline('handlebars.runtime-v4.0.3.js');
 
 
 //处理模块跳转
