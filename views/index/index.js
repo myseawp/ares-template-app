@@ -1,5 +1,6 @@
 'use strict';
 
+require.config(__FRAMEWORK_CONFIG__);
 
 require.async([],function(){
 
