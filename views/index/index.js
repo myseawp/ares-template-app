@@ -1,7 +1,7 @@
 'use strict';
 
 
-require.async(function(){
+require.async([],function(){
 
     var _app = {
         init : function(){
