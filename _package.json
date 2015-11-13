@@ -9,8 +9,10 @@
     "errorhandler": "1.1.1",
     "http-proxy": "1.11.1"
   },
-  "debug":true,
-  "local":false,
+  "config":{
+    "debug":true,
+    "service":"static"
+  },
   "devDependencies": {},
   "engines": {
     "node": ">=0.10.0"
