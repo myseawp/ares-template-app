@@ -9,9 +9,18 @@
     "errorhandler": "1.1.1",
     "http-proxy": "1.11.1"
   },
-  "config":{
-    "debug":true,
-    "service":"static"
+  "config": {
+    "debug": true,
+    "service": "static",
+    "ServiceEncrypt": true,
+    "Server": {
+      "defaultProtocol":"static",
+      "serverIp": "www.yitong.com.cn",
+      "serverPort": "19016",
+      "serverContext": "gsnx_mmp",
+      "timeOut": 30
+    },
+    "test":"/<$= _.slugify(appname) $>/<$= version $>/index/index.html"
   },
   "devDependencies": {},
   "engines": {

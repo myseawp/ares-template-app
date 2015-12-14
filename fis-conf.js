@@ -19,7 +19,7 @@ fis.config.set('settings.deploy.zip', {
 //设置生态组件服务地址
 fis.config.set('repo',{
     remote_protocol:'gitlab',
-    remote_url:'http://192.168.1.86/'
+    remote_url:'http://192.168.1.206/'
 })
 
 //配置内置handlebars模板支持

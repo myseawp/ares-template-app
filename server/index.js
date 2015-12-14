@@ -14,6 +14,10 @@ middleware.forEach(function (m) {
     });
 });
 
+app.get('/testUrl', function(req, res){
+    res.send(meta.config.test||'');
+});
+
 process.on('uncaughtException', function (err) {
     (app.get('logger') || console).error('Uncaught exception:\n', err.stack);
 });
